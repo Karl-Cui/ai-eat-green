@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400
+  };
+  
   constructor() {}
 
 }
