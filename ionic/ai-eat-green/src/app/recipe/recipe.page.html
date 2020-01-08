@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-wrap">{{recipe_name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-img [src]="'assets/pasta.png'"></ion-img>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Ingredients</ion-label>
+    </ion-list-header>
+    <ion-item  *ngFor="let ingredient of recipe_ingredients">
+      <ion-label class="ion-text-wrap"> {{ingredient}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Preparation</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let p of recipe_preparation; let i = index">
+      <ion-label class="ion-text-wrap">{{i+1}}.  {{p}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list-header>
+    <ion-label>Recipes You May Also like</ion-label>
+  </ion-list-header>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>Price: 30 $ | Score: 730 </ion-card-subtitle>
+            <ion-card-title>Pasta</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>Price: 20 $ | Score: 650 </ion-card-subtitle>
+            <ion-card-title>Apple Pie</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>Price: 20 $ | Score: 500 </ion-card-subtitle>
+            <ion-card-title>Tacos</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

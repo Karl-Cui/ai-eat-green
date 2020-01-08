@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Discover
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Animated Searchbar -->
+  <ion-searchbar [(ngModel)]="search_input" (ngModelChange)="onInput($event)" animated></ion-searchbar>
+
+  <ion-grid *ngIf="display_tags"  style="background:var(--ion-color-secondary)" >
+
+    <ion-row>
+      <ion-list-header>
+        <ion-label>Matching / suggested Ingredents</ion-label>
+      </ion-list-header>
+      <ion-col>
+        <div class="ion-padding">
+          <ion-button expand="block">{{search_input}}</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        
+        
+
+        
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-list-header>
+    <ion-label>Recipes for U</ion-label>
+  </ion-list-header>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>Price: 30 $ | Score: 730 </ion-card-subtitle>
+            <ion-card-title>Pasta</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>Price: 20 $ | Score: 650 </ion-card-subtitle>
+            <ion-card-title>Apple Pie</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>Price: 20 $ | Score: 500 </ion-card-subtitle>
+            <ion-card-title>Tacos</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+
+  <ion-list-header>
+    <ion-label>Challanges for you</ion-label>
+  </ion-list-header>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>May-10-2020 to May-30-2020  </ion-card-subtitle>
+            <ion-card-title>Post you pics</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>Jan-1-2020 to May-1-2020 </ion-card-subtitle>
+            <ion-card-title>Refer a friend</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>Feb-1-2020 to Feb-28-2020</ion-card-subtitle>
+            <ion-card-title>Love your Score</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
