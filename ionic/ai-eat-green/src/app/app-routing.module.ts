@@ -25,7 +25,11 @@ const routes: Routes = [
   {
     path: 'recipe',
     loadChildren: () => import('./recipe/recipe.module').then( m => m.RecipePageModule)
+  },  {
+    path: 'credits',
+    loadChildren: () => import('./credits/credits.module').then( m => m.CreditsPageModule)
   }
+
 ];
 @NgModule({
   imports: [
