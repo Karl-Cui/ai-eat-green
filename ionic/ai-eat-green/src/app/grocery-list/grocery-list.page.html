@@ -16,33 +16,39 @@
 <ion-content>
 
 
- 
+
 
   <!-- List of Input Items -->
-<ion-list>
-  <ion-list-header>
-    <ion-label>Shopping List</ion-label>
-  </ion-list-header>
-  <ion-item>
-    <ion-label>1.</ion-label>
-    <ion-checkbox slot="start"></ion-checkbox>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>2.</ion-label>
-    <ion-checkbox slot="start"></ion-checkbox>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item>
-    <div class="ion-padding">
-      <ion-buttons slot="primary">
-        <ion-button color="primary-shade">
-          <ion-icon slot="icon-only" name="add-circle"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </div>
-  </ion-item>
-</ion-list>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Shopping List</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor=" let item of items; let i = index">
+      <ion-label>{{i+1}}.</ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="item.checkedoff"></ion-checkbox>
+      <ion-input value="{{item.name}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <div class="ion-padding">
+        <ion-buttons slot="primary">
+          <ion-button color="primary-shade" (click)="addItem()">
+            <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+        <div class="ion-padding">
+          <ion-button color="secondary" size="large" expand="block" (click)="saveToast()">Save
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 
 
