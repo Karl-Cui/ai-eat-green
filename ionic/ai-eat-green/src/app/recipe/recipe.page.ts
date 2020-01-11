@@ -18,6 +18,13 @@ export class RecipePage implements OnInit {
     "Add in vegetables of choice to add flavor, color and texture such as olives, sundried tomatoes, mushrooms, artichoke and colorful peppers."
   ]
 
+  public slideOpts = {
+    initialSlide: 1,
+    speed: 200,
+    slidesPerView: 2,
+    autoplay:true
+  };
+
   sustainability_figures = {
     "water": 8,
     "land": 10,
