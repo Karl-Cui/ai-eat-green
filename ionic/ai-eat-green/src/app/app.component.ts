@@ -22,8 +22,8 @@ export class AppComponent {
       icon: 'restaurant'
     },
     {
-      title: 'Challanges',
-      url: '/challanges',
+      title: 'Challenges',
+      url: '/challenges',
       icon: 'trophy'
     },
     {
@@ -48,4 +48,3 @@ export class AppComponent {
     });
   }
 }
-
