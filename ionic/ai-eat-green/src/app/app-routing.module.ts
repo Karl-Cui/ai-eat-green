@@ -28,6 +28,10 @@ const routes: Routes = [
   },  {
     path: 'credits',
     loadChildren: () => import('./credits/credits.module').then( m => m.CreditsPageModule)
+  },
+  {
+    path: 'records',
+    loadChildren: () => import('./records/records.module').then( m => m.RecordsPageModule)
   }
 
 ];
