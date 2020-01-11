@@ -10,7 +10,6 @@
   <ion-img class="recipe_image" [src]="'assets/pasta.png'"></ion-img>
 
   <!-- sustainability figures -->
-
   <ion-grid style="background:var(--ion-color-secondary)" >
 
     <ion-row class="ion-justify-content-center">
@@ -59,7 +58,7 @@
   <!-- ingredients list -->
   <ion-list>
     <ion-list-header>
-      <ion-label>Ingredients</ion-label>
+      <ion-label><h1>Ingredients:</h1></ion-label>
     </ion-list-header>
     <ion-item  *ngFor="let ingredient of recipe_ingredients">
       <ion-label class="ion-text-wrap"> {{ingredient}}</ion-label>
@@ -69,7 +68,7 @@
   <!-- recipe instructions -->
   <ion-list>
     <ion-list-header>
-      <ion-label>Preparation</ion-label>
+      <ion-label><h1>Preparation:</h1></ion-label>
     </ion-list-header>
     <ion-item *ngFor="let p of recipe_preparation; let i = index">
       <ion-label class="ion-text-wrap">{{i+1}}.  {{p}}</ion-label>
@@ -78,7 +77,7 @@
 
   <!-- similar recipes -->
   <ion-list-header>
-    <ion-label>Recipes You May Also like</ion-label>
+    <ion-label><h1>Recipes You May Also like</h1></ion-label>
   </ion-list-header>
   <ion-slides pager="true" [options]="slideOpts">
     <ion-slide>
