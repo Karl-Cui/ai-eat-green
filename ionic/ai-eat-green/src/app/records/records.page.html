@@ -13,5 +13,22 @@
   <ion-progress-bar value="{{this.goal_bar}}"></ion-progress-bar>
   <app-score-bar [sustainability_figures]="sustainability_figures"></app-score-bar>
   <h4>My Record</h4>
-  <img src="/assets/shapes.svg" alt="" />
+  <img src="/assets/graph.png" alt="" />
+
+
+  <ion-list>
+      <ion-list-header>
+        <h1>Medal</h1>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="/assets/icon/medal.png" alt="" />
+        </ion-avatar>
+        <ion-label class="ion-text-wrap">
+          <h2>Water Hero</h2>
+          <p>You saved (x)L of water comapred to the avg Candian consumer</p>
+        </ion-label>
+      </ion-item>
+  </ion-list>
 </ion-content>
