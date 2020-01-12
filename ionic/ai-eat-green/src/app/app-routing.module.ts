@@ -15,22 +15,23 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
-    path: 'grocery-list',
+    path: 'tabs/grocery-list',
     loadChildren: () => import('./grocery-list/grocery-list.module').then( m => m.GroceryListPageModule)
   },
   {
-    path: 'discover',
+    path: 'tabs/discover',
     loadChildren: () => import('./discover/discover.module').then( m => m.DiscoverPageModule)
   },
   {
-    path: 'recipe',
+    path: 'tabs/recipe',
     loadChildren: () => import('./recipe/recipe.module').then( m => m.RecipePageModule)
-  },  {
-    path: 'credits',
+  },
+  {
+    path: 'tabs/credits',
     loadChildren: () => import('./credits/credits.module').then( m => m.CreditsPageModule)
   },
   {
-    path: 'records',
+    path: 'tabs/records',
     loadChildren: () => import('./records/records.module').then( m => m.RecordsPageModule)
   }
 

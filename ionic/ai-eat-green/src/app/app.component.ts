@@ -13,22 +13,22 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Grocery Lists',
-      url: '/grocery-list',
+      url: '/tabs/grocery-list',
       icon: 'list'
     },
     {
       title: 'My Recipes',
-      url: '/saved-recipes',
+      url: '/tabs/saved-recipes',
       icon: 'restaurant'
     },
     {
       title: 'Challenges',
-      url: '/challenges',
+      url: '/tabs/challenges',
       icon: 'trophy'
     },
     {
       title: 'Records',
-      url: '/records',
+      url: '/tabs/records',
       icon: 'podium'
     }
   ];

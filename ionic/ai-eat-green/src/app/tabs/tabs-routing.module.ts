@@ -28,6 +28,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'records',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../records/records.module').then(m => m.RecordsPageModule)
+          }
+        ]
+      },
+      {
+        path: 'recipe',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../recipe/recipe.module').then(m => m.RecipePageModule)
+          }
+        ]
+      },
+      {
         path: 'tab3',
         children: [
           {

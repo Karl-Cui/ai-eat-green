@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title class="ion-text-wrap">{{recipe_name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button color="secondary"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -15,9 +18,11 @@
   <!-- ingredients list -->
   <ion-list>
     <ion-list-header>
-      <ion-label><h1>Ingredients:</h1></ion-label>
+      <ion-label>
+        <h1>Ingredients:</h1>
+      </ion-label>
     </ion-list-header>
-    <ion-item  *ngFor="let ingredient of recipe_ingredients">
+    <ion-item *ngFor="let ingredient of recipe_ingredients">
       <ion-label class="ion-text-wrap"> {{ingredient}}</ion-label>
     </ion-item>
   </ion-list>
@@ -25,16 +30,20 @@
   <!-- recipe instructions -->
   <ion-list>
     <ion-list-header>
-      <ion-label><h1>Preparation:</h1></ion-label>
+      <ion-label>
+        <h1>Preparation:</h1>
+      </ion-label>
     </ion-list-header>
     <ion-item *ngFor="let p of recipe_preparation; let i = index">
-      <ion-label class="ion-text-wrap">{{i+1}}.  {{p}}</ion-label>
+      <ion-label class="ion-text-wrap">{{i+1}}. {{p}}</ion-label>
     </ion-item>
   </ion-list>
 
   <!-- similar recipes -->
   <ion-list-header>
-    <ion-label><h1>Recipes You May Also like</h1></ion-label>
+    <ion-label>
+      <h1>Recipes You May Also like</h1>
+    </ion-label>
   </ion-list-header>
   <ion-slides pager="true" [options]="slideOpts">
     <ion-slide>

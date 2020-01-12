@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>records</ion-title>
+    <ion-title>My Records</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button color="secondary"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <app-score-bar [sustainability_figures]="sustainability_figures"></app-score-bar>
+  <h2>Last Week</h2>
+  <h3>You hit 80% of your goals!</h3>
+  <ion-progress-bar value="{{this.goal_bar}}"></ion-progress-bar>
+  <app-score-bar [sustainability_figures]="sustainability_figures"></app-score-bar>
+  <h4>My Record</h4>
+  <img src="/assets/shapes.svg" alt="" />
 </ion-content>
