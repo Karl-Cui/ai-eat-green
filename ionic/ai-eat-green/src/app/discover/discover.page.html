@@ -17,22 +17,81 @@
       <ion-searchbar [(ngModel)]="search_input" (ngModelChange)="onInput($event)" animated></ion-searchbar>
     </ion-row>
     <ion-row *ngIf="display_tags">
-      <ion-list-header>
-        <ion-label>Matching / suggested Ingredients</ion-label>
-      </ion-list-header>
       <ion-col>
           <ion-chip color="primary">
               <ion-label>{{search_input}}</ion-label>
               <ion-icon name="add"></ion-icon>
           </ion-chip>
       </ion-col>
-      <ion-col>
-
-      </ion-col>
-      <ion-col>
-
-      </ion-col>
     </ion-row>
+
+    <!-- hardcoded search --------------------------------------------------->
+    <div *ngIf="search_input == 'p'">
+      <ion-row>
+        <ion-list>
+          <ion-list-header>
+            <ion-label>Suggested Ingredients</ion-label>
+          </ion-list-header>
+        <ion-item>Prawn</ion-item>
+        <ion-item>Pesto</ion-item>
+        </ion-list>
+      </ion-row>
+
+      <ion-row>
+        <ion-list-header>
+          <ion-label>Suggested Recipes</ion-label>
+        </ion-list-header>
+        <ion-col>
+          <ion-card class="welcome-card">
+            <img src="/assets/shapes.svg" alt="" />
+            <ion-card-header>
+              <ion-card-title>Pumpkin Pie</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="welcome-card">
+            <img src="/assets/shapes.svg" alt="" />
+            <ion-card-header>
+              <ion-card-title>Pork chops</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-list-header>
+          <ion-label>Suggested Categories</ion-label>
+        </ion-list-header>
+        <ion-col>
+          <ion-card class="welcome-card">
+            <img src="/assets/shapes.svg" alt="" />
+            <ion-card-header>
+              <ion-card-title>Pasta</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="welcome-card">
+            <img src="/assets/shapes.svg" alt="" />
+            <ion-card-header>
+              <ion-card-title>Poultry</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+    <ion-row *ngIf="search_input == 'pa'">
+      <p>2</p>
+    </ion-row>
+
+    <ion-row *ngIf="search_input.length >= 3">
+      <p>3</p>
+    </ion-row>
+    <!-- end of hardcoded search -------------------------------------------->
+
   </ion-grid>
 
 
