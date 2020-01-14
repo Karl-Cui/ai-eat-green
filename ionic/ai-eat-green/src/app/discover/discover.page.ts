@@ -16,6 +16,7 @@ export class DiscoverPage implements OnInit {
     initialSlide: 1,
     speed: 200,
     slidesPerView: 2,
+    autoplay:true
   };
 
   ngOnInit() {

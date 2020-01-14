@@ -10,7 +10,12 @@
 <ion-content>
 
   <!-- image card -->
-  <ion-img class="recipe_image" [src]="'assets/pasta.png'"></ion-img>
+  <ion-card class="welcome-card">
+    <img src="/assets/pasta.png" alt="" />
+    <ion-card-header>
+      <ion-card-subtitle>View More ...</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
 
   <!-- sustainability figures -->
   <app-score-bar [sustainability_figures]="sustainability_figures"></app-score-bar>
@@ -49,10 +54,10 @@
     <ion-slide>
       <div>
         <ion-card class="welcome-card">
-          <img src="/assets/shapes.svg" alt="" />
+          <img src="/assets/recipe/pasta.jpg" alt="" />
           <ion-card-header>
             <ion-card-subtitle>Price: 30 $ | Score: 730 </ion-card-subtitle>
-            <ion-card-title>Pasta</ion-card-title>
+            <ion-card-title>Chicken Pasta</ion-card-title>
           </ion-card-header>
         </ion-card>
       </div>
@@ -60,7 +65,7 @@
     <ion-slide>
       <div>
         <ion-card class="welcome-card">
-          <img src="/assets/shapes.svg" alt="" />
+          <img src="/assets/recipe/apple_pie.jpg" alt="" />
           <ion-card-header>
             <ion-card-subtitle>Price: 20 $ | Score: 650 </ion-card-subtitle>
             <ion-card-title>Apple Pie</ion-card-title>
@@ -71,7 +76,7 @@
     <ion-slide>
       <div>
         <ion-card class="welcome-card">
-          <img src="/assets/shapes.svg" alt="" />
+          <img src="/assets/recipe/tacos.jpg" alt="" />
           <ion-card-header>
             <ion-card-subtitle>Price: 20 $ | Score: 500 </ion-card-subtitle>
             <ion-card-title>Tacos</ion-card-title>
