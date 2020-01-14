@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-grocery-list',
@@ -8,17 +8,51 @@ import { ToastController } from '@ionic/angular';
 })
 export class GroceryListPage implements OnInit {
 
-  constructor(public toastController: ToastController) { }
+  constructor(
+    public toastController: ToastController,
+    public alertController: AlertController,
+  ) { }
 
+  private current_idx = 0;
   public items = [
-                        {name:"apples", checkedoff: false, score: 60},
-                        {name:"tofu", checkedoff: false, score: 60}]
+    {
+      name: "Apples",
+      checkedoff: false,
+      score: 60,
+      healthyalt: false,
+      healthyalt_name: "",
+      healthyalt_desc: "",
+    },
+    {
+      name: "Tofu",
+      checkedoff: false,
+      score: 60,
+      healthyalt: false,
+      healthyalt_name: "",
+      healthyalt_desc: "",
+    },
+    {
+      name: "Brie cheese",
+      checkedoff: false,
+      score: 30,
+      healthyalt: true,
+      healthyalt_name: "Feta cheese",
+      healthyalt_desc: "Feta cheese uses less water and GHGs in its production cycle than Brie cheese."
+    },
+  ]
 
   ngOnInit() {
   }
 
   addItem(){
-    this.items.push({name:"", checkedoff: false, score: 0})
+    this.items.push({
+      name: "",
+      checkedoff: false,
+      score: 0,
+      healthyalt: false,
+      healthyalt_name: "",
+      healthyalt_desc: "",
+    })
   }
 
   async saveToast() {
@@ -27,6 +61,35 @@ export class GroceryListPage implements OnInit {
       duration: 2000
     });
     toast.present();
+  }
+
+  async presentAlertAlternative(idx) {
+    let item = this.items[idx];
+    this.current_idx = idx;
+
+    const alert = await this.alertController.create({
+      header: "A Greener Alternative ".concat(item.healthyalt_name),
+      message: item.healthyalt_desc,
+      buttons: [
+        {
+          text: 'Change',
+          role: 'cancel',
+          handler: () => {
+            this.replaceWithAlternative(this.current_idx);
+          }
+        }, {
+          text: 'Keep',
+          role: 'cancel',
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  replaceWithAlternative(idx) {
+    this.items[idx].name = this.items[idx].healthyalt_name;
+    this.items[idx].healthyalt = false;
   }
 
 }
