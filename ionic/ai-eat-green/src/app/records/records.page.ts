@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs'
+import { interval } from 'rxjs';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-records',
@@ -8,7 +9,7 @@ import { interval } from 'rxjs'
 })
 export class RecordsPage implements OnInit {
 
-  constructor() { }
+  constructor(public alertController: AlertController) { }
 
   sustainability_figures = {
     "water": 8,
@@ -44,6 +45,32 @@ export class RecordsPage implements OnInit {
       }
     }
     , 10);
+  }
+
+
+  async presentAlertConfirm() {
+    const alert = await this.alertController.create({
+      header: "Congratulations!",
+      subHeader: "You've won a surprise reward!!",
+      message: 'Claim your cupon for <br> <strong>$5 off beyon meat</strong>!!!',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Claim',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
 }
