@@ -12,29 +12,52 @@
 <ion-content>
 
   <!-- Animated Searchbar -->
-  <ion-grid style="background:var(--ion-color-secondary)">
+  <ion-grid style="background:var(--ion-color-secondary-tint)">
     <ion-row class="ion-justify-content-center">
       <ion-searchbar [(ngModel)]="search_input" (ngModelChange)="onInput($event)" animated></ion-searchbar>
     </ion-row>
     <ion-row *ngIf="display_tags">
-      <ion-col>
-          <ion-chip color="primary">
-              <ion-label>{{search_input}}</ion-label>
-              <ion-icon name="add"></ion-icon>
-          </ion-chip>
-      </ion-col>
+
     </ion-row>
 
     <!-- hardcoded search --------------------------------------------------->
     <div *ngIf="search_input == 'p'">
       <ion-row>
-        <ion-list>
-          <ion-list-header>
-            <ion-label>Suggested Ingredients</ion-label>
-          </ion-list-header>
-        <ion-item>Prawn</ion-item>
-        <ion-item>Pesto</ion-item>
-        </ion-list>
+        <ion-list-header>
+          <ion-label>Suggested Ingredients</ion-label>
+        </ion-list-header>
+        <ion-chip color="tertiary">
+          <ion-label>Prawn</ion-label>
+          <ion-icon name="add"></ion-icon>
+        </ion-chip>
+        <ion-chip color="tertiary">
+          <ion-label>Pesto</ion-label>
+          <ion-icon name="add"></ion-icon>
+        </ion-chip>
+        <ion-chip color="tertiary">
+          <ion-label>More Options ...</ion-label>
+        </ion-chip>
+      </ion-row>
+
+      <ion-row>
+        <ion-list-header>
+          <ion-label>Suggested Categories</ion-label>
+        </ion-list-header>
+        <ion-chip color="tertiary">
+          <ion-label>Pasta</ion-label>
+          <ion-icon name="add"></ion-icon>
+        </ion-chip>
+        <ion-chip color="tertiary">
+          <ion-label>Italian</ion-label>
+          <ion-icon name="add"></ion-icon>
+        </ion-chip>
+        <ion-chip color="tertiary">
+          <ion-label>Pescatarian</ion-label>
+          <ion-icon name="add"></ion-icon>
+        </ion-chip>
+        <ion-chip color="tertiary">
+          <ion-label>More Options ...</ion-label>
+        </ion-chip>
       </ion-row>
 
       <ion-row>
@@ -59,27 +82,6 @@
         </ion-col>
       </ion-row>
 
-      <ion-row>
-        <ion-list-header>
-          <ion-label>Suggested Categories</ion-label>
-        </ion-list-header>
-        <ion-col>
-          <ion-card class="welcome-card">
-            <img src="/assets/shapes.svg" alt="" />
-            <ion-card-header>
-              <ion-card-title>Pasta</ion-card-title>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card class="welcome-card">
-            <img src="/assets/shapes.svg" alt="" />
-            <ion-card-header>
-              <ion-card-title>Poultry</ion-card-title>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-      </ion-row>
     </div>
 
 
@@ -97,7 +99,9 @@
 
   <!-- Recipe recommendations -->
   <ion-list-header>
-    <ion-label><h2>Recipes for You</h2></ion-label>
+    <ion-label>
+      <h2>Recipes for You</h2>
+    </ion-label>
   </ion-list-header>
 
   <ion-slides pager="true" [options]="slideOpts">
@@ -146,7 +150,9 @@
 
   <!-- Challenge recommendations -->
   <ion-list-header>
-    <ion-label><h2>Challenges for You</h2></ion-label>
+    <ion-label>
+      <h2>Challenges for You</h2>
+    </ion-label>
   </ion-list-header>
 
   <ion-slides pager="true" [options]="slideOpts">
