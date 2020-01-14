@@ -19,6 +19,8 @@ export class DiscoverPage implements OnInit {
     autoplay:true
   };
 
+  public pasta = false;
+
   ngOnInit() {
   }
 
@@ -28,6 +30,10 @@ export class DiscoverPage implements OnInit {
     } else{
       this.display_tags = false;
     }
+  }
+
+  setpasta(){
+    this.pasta = !(this.pasta)
   }
 
 

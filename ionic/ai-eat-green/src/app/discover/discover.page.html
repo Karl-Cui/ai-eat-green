@@ -39,11 +39,11 @@
         </ion-chip>
       </ion-row>
 
-      <ion-row>
+      <ion-row *ngIf="pasta == false">
         <ion-list-header>
           <ion-label>Suggested Categories</ion-label>
         </ion-list-header>
-        <ion-chip color="tertiary">
+        <ion-chip color="tertiary" (click)="setpasta()">
           <ion-label>Pasta</ion-label>
           <ion-icon name="add"></ion-icon>
         </ion-chip>
@@ -60,7 +60,28 @@
         </ion-chip>
       </ion-row>
 
-      <ion-row>
+      <ion-row *ngIf="pasta">
+        <ion-list-header>
+          <ion-label>Suggested Categories</ion-label>
+        </ion-list-header>
+        <ion-chip color="tertiary" (click)="setpasta()">
+          <ion-label>Pasta</ion-label>
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-chip>
+        <ion-chip color="tertiary">
+          <ion-label>Italian</ion-label>
+          <ion-icon name="add"></ion-icon>
+        </ion-chip>
+        <ion-chip color="tertiary">
+          <ion-label>Pescatarian</ion-label>
+          <ion-icon name="add"></ion-icon>
+        </ion-chip>
+        <ion-chip color="tertiary">
+          <ion-label>More Options ...</ion-label>
+        </ion-chip>
+      </ion-row>
+
+      <ion-row  *ngIf="pasta == false">
         <ion-list-header>
           <ion-label>Suggested Recipes</ion-label>
         </ion-list-header>
@@ -82,15 +103,15 @@
         </ion-col>
       </ion-row>
 
-      <ion-row>
+      <ion-row *ngIf="pasta">
         <ion-list-header>
           <ion-label>Suggested Recipes</ion-label>
         </ion-list-header>
         <ion-col>
-          <ion-card class="welcome-card">
+          <ion-card class="welcome-card" routerLink="/tabs/recipe">
             <img src="/assets/pasta.png" alt="" />
-            <ion-card-header>
-              <ion-card-title>Zucchini Pasta</ion-card-title>
+            <ion-card-header >
+             <ion-card-title>Zucchini Pasta</ion-card-title>
             </ion-card-header>
           </ion-card>
         </ion-col>
