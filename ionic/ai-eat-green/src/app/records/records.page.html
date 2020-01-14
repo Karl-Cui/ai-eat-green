@@ -8,27 +8,44 @@
 </ion-header>
 
 <ion-content>
-  <h2>Last Week</h2>
-  <h3>You hit 80% of your goals!</h3>
-  <ion-progress-bar value="{{this.goal_bar}}"></ion-progress-bar>
-  <app-score-bar [sustainability_figures]="sustainability_figures"></app-score-bar>
-  <h4>My Record</h4>
-  <img src="/assets/graph.png" alt="" />
-
 
   <ion-list>
+    <div padding=20px>
       <ion-list-header>
-        <h1>Medal</h1>
+        <h1>This Week</h1>
       </ion-list-header>
 
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="/assets/icon/medal.png" alt="" />
-        </ion-avatar>
-        <ion-label class="ion-text-wrap">
-          <h2>Water Hero</h2>
-          <p>You saved (x)L of water comapred to the avg Candian consumer</p>
-        </ion-label>
-      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <h3>You hit 80% of your goals!</h3>
+          <ion-progress-bar value="{{this.goal_bar}}"></ion-progress-bar>
+        </ion-row>
+
+        <ion-row>
+          <app-score-bar [sustainability_figures]="sustainability_figures"></app-score-bar>
+        </ion-row>
+
+        <ion-row>
+          <h4>My Record</h4>
+          <img src="/assets/graph.png" alt="" />
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <h1>Medal</h1>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="/assets/icon/medal.png" alt="" />
+      </ion-avatar>
+      <ion-label class="ion-text-wrap">
+        <h2>Water Hero</h2>
+        <p>You saved (x)L of water comapred to the avg Candian consumer</p>
+      </ion-label>
+    </ion-item>
   </ion-list>
 </ion-content>
