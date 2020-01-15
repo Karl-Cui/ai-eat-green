@@ -11,18 +11,19 @@
 
   <ion-list>
     <div padding=20px>
-      <ion-list-header>
-        <h1>This Week</h1>
-      </ion-list-header>
-
       <ion-grid>
+        <ion-row>
+          <h1>This Week</h1>
+        </ion-row>
         <ion-row>
           <h3>You hit 80% of your goals!</h3>
           <ion-progress-bar value="{{this.goal_bar}}"></ion-progress-bar>
         </ion-row>
 
-        <ion-row>
-          <app-score-bar [sustainability_figures]="sustainability_figures"></app-score-bar>
+        <ion-row class="ion-justify-content-center">
+          <ion-col class="ion-align-self-center">
+            <ion-img class="sustainability_icon" [src]="'assets/score-letter1.png'"></ion-img>
+          </ion-col>
         </ion-row>
 
         <ion-row>
