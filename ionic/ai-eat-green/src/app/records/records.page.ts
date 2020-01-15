@@ -50,21 +50,15 @@ export class RecordsPage implements OnInit {
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
       header: "Congratulations!",
-      subHeader: "You've won a surprise reward!!",
-      message: 'Claim your cupon for <br> <strong>$5 off beyon meat</strong>!!!',
+      subHeader: "You've won a surprise reward!",
+      message: 'Claim your coupon for <br> <strong>$5 off beyond meat</strong>!!!',
       buttons: [
         {
           text: 'Cancel',
           role: 'cancel',
-          cssClass: 'secondary',
-          handler: (blah) => {
-            console.log('Confirm Cancel: blah');
-          }
+          cssClass: 'secondary'
         }, {
           text: 'Claim',
-          handler: () => {
-            console.log('Confirm Okay');
-          }
         }
       ]
     });
