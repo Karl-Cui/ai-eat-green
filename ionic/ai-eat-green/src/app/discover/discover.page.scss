@@ -7,3 +7,28 @@ ion-card img {
   height: 120px;
   width: 100%;
 }
+
+.range-md .range-knob-handle .range-pin {
+  transform: translate3d(0, 0, 0) scale(1); }
+
+.range-md:not(.range-has-pin) .range-knob-handle .range-knob {
+  transform: scale(1); }
+
+.range-ios .range-knob-handle .range-pin {
+  transform: translate3d(0, 0, 0) scale(1); }
+
+.range{
+  height: 120px;
+  -ms-transform: rotate(-90deg); /* IE 9 */
+ -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+ transform: rotate(-90deg);
+i.icon{
+   -ms-transform: rotate(90deg); /* IE 9 */
+ -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+ transform: rotate(90deg);
+}
+.range-pin {
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform        : translate3d(0, 0, 0) scale(1);
+}
+}

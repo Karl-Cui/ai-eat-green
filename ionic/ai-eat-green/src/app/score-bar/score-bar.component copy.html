@@ -1,0 +1,105 @@
+<!-- sustainability figures -->
+<ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-align-self-center">
+        <ion-grid>
+          <ion-row class="ion-justify-content-center">
+            <ion-col class="ion-align-self-center">
+              <ion-img class="sustainability_icon" [src]="'assets/icon/drop.png'"></ion-img>
+            </ion-col>
+            <ion-col class="ion-align-self-center">
+              <h2>{{sustainability_figures.water}}</h2>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+
+      <ion-col class="ion-align-self-center">
+        <ion-grid>
+          <ion-row class="ion-justify-content-center">
+            <ion-col class="ion-align-self-center">
+              <ion-img class="sustainability_icon" [src]="'assets/icon/sink.png'"></ion-img>
+            </ion-col>
+            <ion-col class="ion-align-self-center">
+              <h2>{{sustainability_figures.land}}</h2>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+
+      <ion-col class="ion-align-self-center">
+        <ion-grid>
+          <ion-row class="ion-justify-content-center">
+            <ion-col class="ion-align-self-center">
+              <ion-fab vertical="bottom" horizontal="start" edge slot="fixed">
+                <ion-fab-button color="primary"><ion-icon name="add"></ion-icon></ion-fab-button>
+              </ion-fab>
+              <ion-img class="sustainability_icon" [src]="'assets/icon/co2.png'"></ion-img>
+            </ion-col>
+            <ion-col class="ion-align-self-center">
+              <h2>{{sustainability_figures.ghg}}</h2>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-segment>
+        <ion-segment-button>
+
+        </ion-segment-button>
+        <ion-segment-button class="rotate">
+          <ion-label>
+            Poor
+          </ion-label>
+          <ion-icon name="return-right"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-icon name="pin"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-icon name="star"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-icon name="call"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-icon name="globe"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-icon name="basket"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-row>
+    <ion-row>
+      <ion-segment class="gradient">
+        <ion-segment-button>
+          <ion-label class="ion-text-wrap">
+            Poor
+            <ion-icon name="return-right"></ion-icon>
+          </ion-label>
+        </ion-segment-button>
+        <ion-segment-button checked>
+          <ion-label class="ion-text-wrap">
+            Fair
+          </ion-label>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-label class="ion-text-wrap">
+            Good
+          </ion-label>
+        </ion-segment-button>
+        <ion-segment-button>
+          excellent
+        </ion-segment-button>
+      </ion-segment>
+    </ion-row>
+    <ion-row>
+
+      <ion-range class="range" id="percent" min="1000" max="2000" step="100" [(ngModel)]="score"  snaps dual-knobs  pin>
+        <ion-icon slot="start" size="small" color="danger" name="heart-empty"></ion-icon>
+        <ion-icon slot="end" color="danger" name="heart"></ion-icon>
+      </ion-range>
+    </ion-row>
+  </ion-grid>

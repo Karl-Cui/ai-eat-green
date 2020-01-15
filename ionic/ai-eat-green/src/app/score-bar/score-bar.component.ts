@@ -11,6 +11,8 @@ export class ScoreBarComponent implements OnInit {
 
   @Input('sustainability_figures') sustainability_figures: any;
 
+  score = { lower: 1200, upper: 1400 }
+
   ngOnInit() {
     
   }
