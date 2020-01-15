@@ -1,12 +1,15 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" side="end" type="overlay">
+
       <ion-header>
         <ion-toolbar>
           <ion-title>Menu</ion-title>
         </ion-toolbar>
       </ion-header>
+
       <ion-content>
+
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
@@ -17,10 +20,14 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+
         <div class="ion-padding">
+          <p class="refer-a-friend" (click)="presentAlertReferral()">Refer a friend</p>
           <ion-button color="secondary" type="submit" expand="block">LogOut</ion-button>
         </div>
+
       </ion-content>
+
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
