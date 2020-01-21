@@ -1,17 +1,12 @@
-Package         Version            
---------------- -------------------
-certifi         2019.9.11          
-Click           7.0                
-Flask           1.1.1              
-Flask-SocketIO  4.2.1              
-itsdangerous    1.1.0              
-Jinja2          2.10.3             
-MarkupSafe      1.1.1              
-pip             19.3.1             
-python-engineio 3.10.0             
-python-socketio 4.3.1              
-setuptools      41.6.0.post20191030
-six             1.13.0             
-Werkzeug        0.16.0             
-wheel           0.33.6             
-wincertstore    0.2                
+certifi==2019.9.11
+Click==7.0
+Flask==1.1.1
+Flask-SocketIO==4.2.1
+itsdangerous==1.1.0
+Jinja2==2.10.3
+MarkupSafe==1.1.1
+python-engineio==3.10.0
+python-socketio==4.3.1
+six==1.13.0
+Werkzeug==0.16.0
+wincertstore==0.2
