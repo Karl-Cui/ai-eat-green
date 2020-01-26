@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ToastController } from '@ionic/angular';
+import { GroceryListService } from './grocery-list.service';
 
 @Component({
   selector: 'app-grocery-list',
@@ -11,6 +12,7 @@ export class GroceryListPage implements OnInit {
   constructor(
     public toastController: ToastController,
     public alertController: AlertController,
+    private GroceryListService: GroceryListService
   ) { }
 
   private current_idx = 0;
@@ -42,6 +44,7 @@ export class GroceryListPage implements OnInit {
   ]
 
   ngOnInit() {
+    this.getGroceryList("user")
   }
 
   addItem(){
@@ -90,6 +93,16 @@ export class GroceryListPage implements OnInit {
   replaceWithAlternative(idx) {
     this.items[idx].name = this.items[idx].healthyalt_name;
     this.items[idx].healthyalt = false;
+  }
+
+  getGroceryList(user) {
+    this.GroceryListService.getGroceryList(user).subscribe((response)=>{
+        console.log(response)
+      },
+      error => {
+        console.log(error)
+      }
+    );
   }
 
 }
