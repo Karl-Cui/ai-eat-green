@@ -10,3 +10,5 @@ python-socketio==4.3.1
 six==1.13.0
 Werkzeug==0.16.0
 wincertstore==0.2
+flask-restful==0.3.7
+flask-cors==3.0.8
