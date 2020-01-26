@@ -23,7 +23,7 @@ const routes: Routes = [
     loadChildren: () => import('./discover/discover.module').then( m => m.DiscoverPageModule)
   },
   {
-    path: 'tabs/recipe',
+    path: 'tabs/recipe/:id',
     loadChildren: () => import('./recipe/recipe.module').then( m => m.RecipePageModule)
   },
   {

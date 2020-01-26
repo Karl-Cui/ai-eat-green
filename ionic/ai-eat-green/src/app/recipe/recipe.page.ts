@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-recipe',
@@ -7,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipePage implements OnInit {
 
-  constructor() { }
 
   recipe_name = "Zucchini Pesto Pasta"
   recipe_ingredients = ["2-3 medium zucchinis", "1/2 cup fresh basil",  "500 mL Pesto sauce", "1/4 cup raw pine nuts", "1/4 cup olive oil", "2 cloves raw garlic", "2 tablespoons nutritional yeast or grated pumpkin seeds"]
@@ -31,8 +31,13 @@ export class RecipePage implements OnInit {
     "ghg": 12,
   }
 
-  ngOnInit() {
+  id: string;
 
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.id = this.route.snapshot.paramMap.get('id');
+    console.log(this.id)
   }
 
 }
