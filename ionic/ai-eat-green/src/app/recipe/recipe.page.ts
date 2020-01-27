@@ -40,4 +40,11 @@ export class RecipePage implements OnInit {
     console.log(this.id)
   }
 
+  addtocompare(){
+    let compareRecipes = JSON.parse(localStorage.getItem('compareRecipes'))
+    compareRecipes.push(this.id)
+    localStorage.setItem('compareRecipes', JSON.stringify(compareRecipes));
+    console.log(localStorage.getItem('compareRecipes'))
+  }
+
 }

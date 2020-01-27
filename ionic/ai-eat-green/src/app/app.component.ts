@@ -47,6 +47,8 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+
+    localStorage.setItem('compareRecipes', JSON.stringify([]));
   }
 
   async presentAlertReferral() {

@@ -33,7 +33,20 @@ const routes: Routes = [
   {
     path: 'tabs/records',
     loadChildren: () => import('./records/records.module').then( m => m.RecordsPageModule)
+  },
+  {
+    path: 'tabs/challenges',
+    loadChildren: () => import('./challenges/challenges.module').then( m => m.ChallengesPageModule)
+  },
+  {
+    path: 'tabs/challenge/:id',
+    loadChildren: () => import('./challenge/challenge.module').then( m => m.ChallengePageModule)
+  },
+  {
+    path: 'compare-recipes',
+    loadChildren: () => import('./compare-recipes/compare-recipes.module').then( m => m.CompareRecipesPageModule)
   }
+
 
 ];
 @NgModule({

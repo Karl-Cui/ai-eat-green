@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Challenges</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Animated Searchbar -->
+  <ion-grid style="background:var(--ion-color-secondary-tint)">
+    <ion-row class="ion-justify-content-center">
+      <ion-searchbar [(ngModel)]="search_input" (ngModelChange)="onInput($event)" animated></ion-searchbar>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-card class="welcome-card">
+        <img src="/assets/recipe/salad.jpg" alt="" />
+        <ion-card-header>
+          <ion-card-subtitle>May-10-2020 to May-30-2020</ion-card-subtitle>
+          <ion-card-title>Post your food pics</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card class="welcome-card">
+        <img src="/assets/recipe/vegetable.jpg" alt="" />
+        <ion-card-header>
+          <ion-card-subtitle>Feb-1-2020 to Feb-28-2020</ion-card-subtitle>
+          <ion-card-title>Meatless for a week</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card class="welcome-card">
+        <img src="/assets/recipe/cooking.jpg" alt="" />
+        <ion-card-header>
+          <ion-card-subtitle>Feb-1-2020 to Feb-28-2020</ion-card-subtitle>
+          <ion-card-title>Try 3 new recipes</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

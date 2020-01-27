@@ -38,12 +38,30 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'recipe',
+        path: 'recipe/:id',
         children: [
           {
             path: '',
             loadChildren: () =>
               import('../recipe/recipe.module').then(m => m.RecipePageModule)
+          }
+        ]
+      },
+      {
+        path: 'challenges',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../challenges/challenges.module').then( m => m.ChallengesPageModule)
+          }
+        ]
+      },
+      {
+        path: 'challenge/:id',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../challenge/challenge.module').then( m => m.ChallengePageModule)
           }
         ]
       },
