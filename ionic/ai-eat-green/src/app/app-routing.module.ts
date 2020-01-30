@@ -43,7 +43,7 @@ const routes: Routes = [
     loadChildren: () => import('./challenge/challenge.module').then( m => m.ChallengePageModule)
   },
   {
-    path: 'compare-recipes',
+    path: 'tabs/compare-recipes',
     loadChildren: () => import('./compare-recipes/compare-recipes.module').then( m => m.CompareRecipesPageModule)
   }
 

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/5ba1a371-dd3c-4d2d-8ff6-ffe6a1d2f12c/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/ai-eat-green-front-end",
+    "appService.deploySubpath": ""
+}

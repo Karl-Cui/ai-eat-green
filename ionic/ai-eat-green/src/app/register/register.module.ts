@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
+import { IonicSelectableModule } from 'ionic-selectable';
 
 import { RegisterPageRoutingModule } from './register-routing.module';
 
@@ -13,7 +14,8 @@ import { RegisterPage } from './register.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    RegisterPageRoutingModule
+    RegisterPageRoutingModule,
+    IonicSelectableModule
   ],
   declarations: [RegisterPage]
 })
