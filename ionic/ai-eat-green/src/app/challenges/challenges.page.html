@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Challenges</ion-title>
+    <ion-title class="ion-text-wrap">Challenges</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button color="secondary"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -14,8 +17,9 @@
   </ion-grid>
 
   <ion-grid>
+
     <ion-row>
-      <ion-card class="welcome-card">
+      <ion-card class="welcome-card" routerLink="/tabs/challenges/0">
         <img src="/assets/recipe/salad.jpg" alt="" />
         <ion-card-header>
           <ion-card-subtitle>May-10-2020 to May-30-2020</ion-card-subtitle>
@@ -23,8 +27,9 @@
         </ion-card-header>
       </ion-card>
     </ion-row>
+
     <ion-row>
-      <ion-card class="welcome-card">
+      <ion-card class="welcome-card" routerLink="/tabs/challenges/1">
         <img src="/assets/recipe/vegetable.jpg" alt="" />
         <ion-card-header>
           <ion-card-subtitle>Feb-1-2020 to Feb-28-2020</ion-card-subtitle>
@@ -32,8 +37,9 @@
         </ion-card-header>
       </ion-card>
     </ion-row>
+
     <ion-row>
-      <ion-card class="welcome-card">
+      <ion-card class="welcome-card" routerLink="/tabs/challenges/2">
         <img src="/assets/recipe/cooking.jpg" alt="" />
         <ion-card-header>
           <ion-card-subtitle>Feb-1-2020 to Feb-28-2020</ion-card-subtitle>
@@ -41,6 +47,7 @@
         </ion-card-header>
       </ion-card>
     </ion-row>
+
   </ion-grid>
 
 </ion-content>

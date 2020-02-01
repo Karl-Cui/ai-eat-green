@@ -10,6 +10,20 @@ export class ChallengePage implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
+  challenges = [
+    {
+      'name': 'Post your Food Pictures',
+      'description': 'hello world'
+    },
+    {
+      'name': 'Meatless for a Week',
+      'description': 'hello world'
+    },
+    {
+      'name': 'Try 3 new recipes',
+      'description': 'hello world'
+    }
+  ];
   id: string;
 
   ngOnInit() {
