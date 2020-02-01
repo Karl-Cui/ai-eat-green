@@ -11,6 +11,7 @@ import pandas as pd
 import papermill as pm
 
 from reco_utils.common.timer import Timer
+from reco_utils.dataset import movielens
 from reco_utils.dataset.python_splitters import python_stratified_split
 from reco_utils.evaluation.python_evaluation import map_at_k, ndcg_at_k, precision_at_k, recall_at_k
 from reco_utils.recommender.sar import SAR
@@ -62,7 +63,6 @@ model = SAR(
     timedecay_formula=True
 )
 
-
 with Timer() as train_time:
     model.fit(train)
 
@@ -73,4 +73,4 @@ with Timer() as test_time:
 
 print("Took {} seconds for prediction.".format(test_time.interval))
 
-print(top_k.head(50))
+print(top_k.head(10))
