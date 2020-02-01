@@ -26,9 +26,10 @@ This is very similar to the Jupyter notebook
 TOP_K = 10
 
 # load dataframe containing users and recipes they like or dislike
-data_path = r'C:\Users\karlc\Documents\projects\recipe-box\data\recipes.pkl'
+data_path = r'C:\Users\karlc\Documents\projects\ai-eat-green\model\data\recipes_raw\recipes.pkl'
 data = pd.read_pickle(data_path)
 
+# rest of this taken from the notebook, except replace 'itemID' with 'recipeID'
 train, test = python_stratified_split(data, ratio=0.75, col_user='userID', col_item='recipeID', seed=42)
 
 print("""

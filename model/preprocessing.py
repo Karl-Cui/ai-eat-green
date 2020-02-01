@@ -25,7 +25,10 @@ df = movielens.load_pandas_df(
 )
 
 df.rename(columns={'itemID': 'recipeID'}, inplace=True)
-print('Number of recipes: ' + str(df['recipeID'].nunique()))    # 3706 recipes
+
+# 100k: 1682 recipes
+# 1m: 3706 recipes
+print('Number of recipes: ' + str(df['recipeID'].nunique()))
 
 # # Fake data--add users that like a certain ingredient
 # data = []
