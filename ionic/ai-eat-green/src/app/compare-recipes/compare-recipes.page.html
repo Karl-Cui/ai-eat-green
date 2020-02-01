@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Compare Recipes</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button color="secondary"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -9,10 +12,9 @@
     <ion-row>
       <ion-col>
         <ion-card class="welcome-card">
-          <img src="/assets/recipe/risotto.jpg" alt="" />
+          <img src="/assets/pasta.png" alt="" />
           <ion-card-header>
-            <ion-card-subtitle>Price: 20 $ | Score: 730 </ion-card-subtitle>
-            <ion-card-title>Pear Risotto</ion-card-title>
+            <ion-card-title>Zucchini Pesto Pasta</ion-card-title>
           </ion-card-header>
           <ion-card-content>
             <ion-img class="sustainability_icon" [src]="'assets/score-letter2.png'"></ion-img>
@@ -23,13 +25,12 @@
     <ion-row>
       <ion-col>
         <ion-card class="welcome-card">
-          <img src="/assets/recipe/noodles.jpg" alt="" />
+          <img src="/assets/recipe/pasta.jpg" alt="" />
           <ion-card-header>
-            <ion-card-subtitle>Price: 20 $ | Score: 650 </ion-card-subtitle>
             <ion-card-title>Vegan Noodles</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <ion-img class="sustainability_icon" [src]="'assets/score-letter2.png'"></ion-img>
+            <ion-img class="sustainability_icon" [src]="'assets/chicken_score.png'"></ion-img>
           </ion-card-content>
         </ion-card>
       </ion-col>

@@ -66,6 +66,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'tabs/compare-recipes',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../compare-recipes/compare-recipes.module').then( m => m.CompareRecipesPageModule)
+          }
+        ]
+      },
+      {
         path: 'tab3',
         children: [
           {
