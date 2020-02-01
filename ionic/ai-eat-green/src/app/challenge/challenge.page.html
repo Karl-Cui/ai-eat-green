@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>challenge</ion-title>
+    <ion-title class="ion-text-wrap">{{challenges[id].name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button color="secondary"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <p>{{challenges[id].description}}</p>
 </ion-content>
