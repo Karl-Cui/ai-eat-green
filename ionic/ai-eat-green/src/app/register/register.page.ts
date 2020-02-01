@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
 
@@ -171,13 +173,49 @@ export class RegisterPage implements OnInit {
     "Wraps"
   ]
 
-  cusine_obj =[]
+  allergies = [
+    "Egg",
+    "Fish",
+    "Peanuts",
+    "Shellfish",
+    "Sesame",
+    "Wheat",
+    "Milk"
+  ]
 
+  cusine_obj = []
 
+  allergies_obj = []
+
+  my_deit = []
+  my_cusines = []
+  my_dislikes = []
+  my_allergies = []
+  my_cooking = []
+
+  state = 0;
   ngOnInit() {
     this.cuisine.forEach(element => {
-      this.cusine_obj.push({name: element,  checkedoff: false})
+      this.cusine_obj.push({ name: element, checkedoff: false })
     });
+    this.allergies.forEach(element => {
+      this.allergies_obj.push({ name: element, checkedoff: false })
+    })
+  }
+
+  register(form) {
+    this.state = 1
+  }
+
+  forward() {
+    this.state = this.state + 1;
+    if (this.state == 4) {
+      this.redirect()
+    }
+  }
+
+  redirect() {
+    this.router.navigate(['tabs/discover']);
   }
 
 }

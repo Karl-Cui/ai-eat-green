@@ -30,6 +30,11 @@ export class AppComponent {
       title: 'Records',
       url: '/tabs/records',
       icon: 'podium'
+    },
+    {
+      title: 'Compare',
+      url: '/tabs/compare-recipes',
+      icon: 'swap'
     }
   ];
 
