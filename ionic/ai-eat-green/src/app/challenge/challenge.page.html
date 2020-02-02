@@ -17,6 +17,8 @@
 
     <div *ngIf="challenges[id].joined">
       <img src="/assets/challenge-bar-meatless.png" alt="" />
+      <br/>
+      <ion-button color="secondary" type="submit" expand="block" (click)="leaveChallenge(id)">Leave this Challenge</ion-button>
     </div>
 
     <br/>

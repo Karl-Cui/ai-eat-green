@@ -41,4 +41,8 @@ export class ChallengePage implements OnInit {
     this.challenges[id].joined = true;
   }
 
+  leaveChallenge(id) {
+    this.challenges[id].joined = false;
+  }
+
 }
