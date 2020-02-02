@@ -8,5 +8,21 @@
 </ion-header>
 
 <ion-content>
-  <p>{{challenges[id].description}}</p>
+  <ion-card>
+    <img class="challenge-img" src="{{challenges[id].image}}" alt="" />
+  </ion-card>
+
+  <div padding=20px>
+    <h4>{{challenges[id].description}}</h4>
+
+    <div *ngIf="challenges[id].joined">
+      <img src="/assets/challenge-bar-meatless.png" alt="" />
+    </div>
+
+    <br/>
+
+    <div *ngIf="!challenges[id].joined">
+      <ion-button color="secondary" type="submit" expand="block" (click)="joinChallenge(id)">Join this Challenge</ion-button>
+    </div>
+  </div>
 </ion-content>
