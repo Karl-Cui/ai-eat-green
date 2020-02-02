@@ -8,6 +8,17 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class RecipePage implements OnInit {
 
+  reicpes = [{
+    recipe_name:"Zucchini Pesto Pasta",
+    recipe_ingredients: ["2-3 medium zucchinis", "1/2 cup fresh basil", "500 mL Pesto sauce", "1/4 cup raw pine nuts", "1/4 cup olive oil", "2 cloves raw garlic", "2 tablespoons nutritional yeast or grated pumpkin seeds"],
+    recipe_preparation: [
+      "Slice zucchini into fettuccini noodles with a vegetable peeler or mandolin. If you have a spiral vegetable cutter, it will make beautiful spaghetti noodles!",
+      "Blend all ingredients, except for the zucchini, in a food processor until smooth.",
+      "Scoop zucchini pasta into bowls and top with pesto sauce.",
+      "Add in vegetables of choice to add flavor, color and texture such as olives, sundried tomatoes, mushrooms, artichoke and colorful peppers."
+    ],
+    recipe_img: "/assets/pasta.png"
+  }]
 
   recipe_name = "Zucchini Pesto Pasta"
   recipe_ingredients = ["2-3 medium zucchinis", "1/2 cup fresh basil", "500 mL Pesto sauce", "1/4 cup raw pine nuts", "1/4 cup olive oil", "2 cloves raw garlic", "2 tablespoons nutritional yeast or grated pumpkin seeds"]
@@ -17,6 +28,8 @@ export class RecipePage implements OnInit {
     "Scoop zucchini pasta into bowls and top with pesto sauce.",
     "Add in vegetables of choice to add flavor, color and texture such as olives, sundried tomatoes, mushrooms, artichoke and colorful peppers."
   ]
+
+  recipe_img = "/assets/pasta.png"
 
   public slideOpts = {
     initialSlide: 1,
@@ -39,6 +52,12 @@ export class RecipePage implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
+    if (this.id == "128" ){
+      this.recipe_name = this.reicpes[1].recipe_name
+      this.recipe_ingredients = this.reicpes[1].recipe_ingredients
+      this.recipe_preparation = this.reicpes[1].recipe_preparation
+      this.recipe_img = this.reicpes[1].recipe_img
+    }
     console.log(this.id)
   }
 
