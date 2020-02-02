@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 import { IonicSelectableModule } from 'ionic-selectable';
+import {ProgressBarModule} from "angular-progress-bar"
 
 import { RegisterPageRoutingModule } from './register-routing.module';
 
@@ -15,7 +16,8 @@ import { RegisterPage } from './register.page';
     FormsModule,
     IonicModule,
     RegisterPageRoutingModule,
-    IonicSelectableModule
+    IonicSelectableModule,
+    ProgressBarModule
   ],
   declarations: [RegisterPage]
 })

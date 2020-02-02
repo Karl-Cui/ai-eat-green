@@ -16,6 +16,8 @@
           <div text-center>
             <h3>Create your account!</h3>
           </div>
+          <progress-bar [progress]="0" [color]="'#488aff'">
+          </progress-bar>
           <div padding>
             <ion-item>
               <ion-input name="name" type="text" placeholder="Name" ngModel required></ion-input>
@@ -42,20 +44,17 @@
   <div *ngIf="state == 1" class="container">
     <div class="scroll" scrollY="true">
       <ion-grid>
-        <ion-row class="ion-justify-content-center">
-          <ion-col class="ion-align-self-center">
-            <div class=" ion-justify-content-center ion-padding">
-              <img src="assets/icon/dino.png" />
-            </div>
-          </ion-col>
-          <ion-col class="ion-align-self-center">
-            <div class=" ion-justify-content-center ion-padding">
-              <ion-avatar slot="start">
-                <img src="./avatar-leia.png">
-              </ion-avatar>
-            </div>
-          </ion-col>
-        </ion-row>
+        <ion-grid>
+          <ion-row color="primary" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div text-center>
+                <h3>Hi Aki</h3>
+              </div>
+              <progress-bar [progress]="30" [color]="'#488aff'">
+              </progress-bar>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-grid>
 
       <ion-grid>
@@ -83,18 +82,13 @@
   <div *ngIf="state == 2" class="container">
     <div class="scroll" scrollY="true">
       <ion-grid>
-        <ion-row class="ion-justify-content-center">
-          <ion-col class="ion-align-self-center">
-            <div class=" ion-justify-content-center ion-padding">
-              <img src="assets/icon/dino.png" />
+        <ion-row color="primary" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              <h3>Hi Aki</h3>
             </div>
-          </ion-col>
-          <ion-col class="ion-align-self-center">
-            <div class=" ion-justify-content-center ion-padding">
-              <ion-avatar slot="start">
-                <img src="./avatar-leia.png">
-              </ion-avatar>
-            </div>
+            <progress-bar [progress]="50" [color]="'#488aff'">
+            </progress-bar>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -148,18 +142,13 @@
   <div *ngIf="state == 3" class="container">
     <div class="scroll" scrollY="true">
       <ion-grid>
-        <ion-row class="ion-justify-content-center">
-          <ion-col class="ion-align-self-center">
-            <div class=" ion-justify-content-center ion-padding">
-              <img src="assets/icon/dino.png" />
+        <ion-row color="primary" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              <h3>Hi Aki</h3>
             </div>
-          </ion-col>
-          <ion-col class="ion-align-self-center">
-            <div class=" ion-justify-content-center ion-padding">
-              <ion-avatar slot="start">
-                <img src="./avatar-leia.png">
-              </ion-avatar>
-            </div>
+            <progress-bar [progress]="70" [color]="'#488aff'">
+            </progress-bar>
           </ion-col>
         </ion-row>
       </ion-grid>

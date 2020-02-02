@@ -19,7 +19,7 @@ export class RecipePage implements OnInit {
         "Add in vegetables of choice to add flavor, color and texture such as olives, sundried tomatoes, mushrooms, artichoke and colorful peppers."
       ],
       recipe_img: "/assets/pasta.png",
-      progress_bar_img: "/assets/score_letter2.png"
+      progress_bar_img: "/assets/score-letter2.png"
     },
     {
       recipe_name: "Zucchini Pesto Pasta",
