@@ -183,9 +183,30 @@ export class RegisterPage implements OnInit {
     "Milk"
   ]
 
+  deit = [
+    "keto",
+    "paleo",
+    "vegetarian",
+    "DASH Diet",
+    "MIND Diet",
+    "Low Carb",
+    "No Sugar",
+    "Raw",
+    "TLC Diet",
+    "Mayo Clinic",
+    "Mediterranean",
+    "Flexitarian",
+    "Slim Fast",
+    "Vegan",
+    "Macrobiotic",
+    "Whole"
+  ]
+
   cusine_obj = []
 
   allergies_obj = []
+
+  deit_obj = []
 
   my_deit = []
   my_cusines = []
@@ -201,6 +222,10 @@ export class RegisterPage implements OnInit {
     this.allergies.forEach(element => {
       this.allergies_obj.push({ name: element, checkedoff: false })
     })
+
+    this.deit.forEach(element => {
+      this.deit_obj.push({ name: element, checkedoff: false })
+    });
   }
 
   register(form) {
