@@ -59,18 +59,18 @@
   </ion-list>
 
   <!-- similar recipes -->
+
   <ion-list-header>
     <ion-label>
       <h1>Recipes You May Also like</h1>
     </ion-label>
   </ion-list-header>
-  <ion-slides pager="true" [options]="slideOpts">
+  <ion-slides *ngIf="this.id == '19'" pager="true" [options]="slideOpts">
     <ion-slide>
       <div>
         <ion-card class="welcome-card">
           <img src="/assets/recipe/salad.jpg" alt="" />
           <ion-card-header>
-            <ion-card-subtitle>Price: 12 $ | Score: 730 </ion-card-subtitle>
             <ion-card-title>Garden salad</ion-card-title>
           </ion-card-header>
         </ion-card>
@@ -81,7 +81,6 @@
         <ion-card class="welcome-card">
           <img src="/assets/recipe/apple_pie.jpg" alt="" />
           <ion-card-header>
-            <ion-card-subtitle>Price: 20 $ | Score: 650 </ion-card-subtitle>
             <ion-card-title>Apple Pie</ion-card-title>
           </ion-card-header>
         </ion-card>
@@ -92,11 +91,45 @@
         <ion-card class="welcome-card">
           <img src="/assets/recipe/tacos.jpg" alt="" />
           <ion-card-header>
-            <ion-card-subtitle>Price: 20 $ | Score: 730 </ion-card-subtitle>
             <ion-card-title>Pear Risotto</ion-card-title>
           </ion-card-header>
         </ion-card>
       </div>
     </ion-slide>
   </ion-slides>
+
+
+  <ion-slides *ngIf="this.id == '128'" pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/pasta.png" alt="" />
+          <ion-card-header>
+            <ion-card-title>Zucchini Pesto Pasta</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/recipe/Mediterranean-Pasta.jpg" alt="" />
+          <ion-card-header>
+            <ion-card-title>Mediterranean Pasta</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <ion-card class="welcome-card">
+          <img src="/assets/recipe/salad.jpg" alt="" />
+          <ion-card-header>
+            <ion-card-title>Garden salad</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
 </ion-content>
