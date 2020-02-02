@@ -22,7 +22,7 @@ export class RecipePage implements OnInit {
       progress_bar_img: "/assets/score-letter2.png"
     },
     {
-      recipe_name: "Zucchini Pesto Pasta",
+      recipe_name: "Chicken Pasta",
       recipe_ingredients: ["12 oz. spaghetti or angel hair", "1 tbsp. extra-virgin olive oil", "3 lb. boneless, skinless chicken breasts", "2 cloves garlic", "2 c. diced tomatoes", "3 c. baby spinach", "1/3 c. freshly grated Parmesan"],
       recipe_preparation: [
         "In a large pot of salted boiling water, cook pasta according to package directions until al dente. Drain, reserving 1 cup pasta water.",

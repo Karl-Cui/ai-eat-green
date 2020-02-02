@@ -184,9 +184,10 @@ export class RegisterPage implements OnInit {
   ]
 
   deit = [
-    "keto",
-    "paleo",
-    "vegetarian",
+    "Keto",
+    "Paleo",
+    "Vegetarian",
+    "Vegan",
     "DASH Diet",
     "MIND Diet",
     "Low Carb",
